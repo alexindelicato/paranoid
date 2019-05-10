@@ -15,7 +15,7 @@ explore: relate_jobstopersonas {
   group_label: "Paranoid"
   view_label: "Relate Jobs To Product/Personas"
   join: relate_jobstoproducts {
-    type: left_outer
+    type: inner
     relationship: one_to_many
     sql_on: ${relate_jobstopersonas.jobid_fkey}=${relate_jobstoproducts.jobid_fkey};;
   }
