@@ -36,6 +36,7 @@ view: relate_jobstoproducts {
 
   dimension: jobid_fkey {
     type: string
+    primary_key: yes
     sql: ${TABLE}.jobid_fkey ;;
   }
 
