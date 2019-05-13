@@ -11,7 +11,7 @@ view: relate_jobstoproducts {
 
   measure: count_availibilityscore {
     type: count
-    drill_fields: [_fivetran_synced_time,relatejobstopersonas.personaid_fkey,availabilityofjob,availabilityscore,jobid_fkey,productid_fkey]
+    drill_fields: [_fivetran_synced_time,relate_jobstopersonas.personaid_fkey,availabilityofjob,availabilityscore,jobid_fkey,productid_fkey]
   }
 
   dimension: id {
