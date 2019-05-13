@@ -9,6 +9,11 @@ view: relate_jobstoproducts {
     drill_fields: [detail*]
   }
 
+  measure: count_availibilityscore {
+    type: count
+    drill_fields: [_fivetran_synced_time,relatejobstopersonas.personaid_fkey,availabilityofjob,availabilityscore,jobid_fkey,productid_fkey]
+  }
+
   dimension: id {
     type: number
     sql: ${TABLE}.id ;;
