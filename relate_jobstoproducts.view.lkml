@@ -14,6 +14,11 @@ view: relate_jobstoproducts {
     drill_fields: [_fivetran_synced_time,relate_jobstopersonas.personaid_fkey,availabilityofjob,availabilityscore,jobid_fkey,productid_fkey]
   }
 
+ dimension: count_jobs {
+   type:  number
+  sql:  COUNT(DISTINCT jobid_fkey) ;;
+ }
+
   dimension: id {
     type: number
     sql: ${TABLE}.id ;;
