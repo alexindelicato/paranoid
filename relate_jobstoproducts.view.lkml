@@ -16,7 +16,7 @@ view: relate_jobstoproducts {
 
  dimension: count_jobs {
    type:  number
-  sql:  COUNT(DISTINCT jobid_fkey) ;;
+  sql:  ${TABLE}.COUNT(DISTINCT jobid_fkey) ;;
  }
 
   dimension: id {
