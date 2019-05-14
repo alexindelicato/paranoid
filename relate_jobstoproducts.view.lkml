@@ -16,7 +16,7 @@ view: relate_jobstoproducts {
 
  dimension: count_jobs {
    type:  number
-  sql:  SELECT COUNT(DISTINCT jobid_fkey) as totalrow FROM `fivetran-ovation-tix-warehouse.dbo_dbo.relate_jobstoproducts` ;;
+  sql:  ${TABLE}.COUNT(DISTINCT jobid_fkey) ;;
  }
 
   dimension: id {
