@@ -12,7 +12,7 @@ persist_with: paranoid_default_datagroup
 
 explore: relate_jobstopersonas {
   label: "Relate Jobs To Product/Personas"
-  group_label: "Paranoid"
+  group_label: "Zz_Paranoid"
   view_label: "Relate Jobs To Product/Personas"
   join: relate_jobstoproducts {
     type: left_outer
