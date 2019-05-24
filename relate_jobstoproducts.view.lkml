@@ -14,6 +14,11 @@ view: relate_jobstoproducts {
     drill_fields: [_fivetran_synced_time,relate_jobstopersonas.personaid_fkey,availabilityofjob,availabilityscore,jobid_fkey,productid_fkey]
   }
 
+  measure: availabilityscoremeasure {
+    type: sum_distinct
+    sql: cast(${availabilityscore} as INT64) ;;
+  }
+
  dimension: count_jobs {
    type:  number
   sql:  ${TABLE}.COUNT(DISTINCT jobid_fkey) ;;
